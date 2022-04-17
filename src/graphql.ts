@@ -44,7 +44,7 @@ export interface OrderItem {
 export interface Order {
     number: string;
     id: number;
-    site: string;
+    site?: Nullable<string>;
     createdAt: string;
     status: string;
     delivery?: Nullable<OrderDelivery>;

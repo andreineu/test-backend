@@ -1,45 +1,44 @@
 type Query {
-    getOrders(page: Int): OrdersResponse!
-    order(number: String!): Order
+  getOrders(page: Int): OrdersResponse!
+  order(number: String!): Order
 }
 
 type OrdersResponse {
-    orders: [Order]!
-    pagination: Pagination!
+  orders: [Order]!
+  pagination: Pagination!
 }
 
 type Pagination {
-    limit: Int!
-    totalCount: Int!
-    currentPage: Int!
-    totalPageCount: Int!
+  limit: Int!
+  totalCount: Int!
+  currentPage: Int!
+  totalPageCount: Int!
 }
 
 type OrderItemOffer {
-    externalId: String
-    displayName: String
-    article: String
+  externalId: String
+  displayName: String
+  article: String
 }
 
 type OrderItem {
-    id: Int!
-    status: String!
-    quantity: Int!
-    offer: OrderItemOffer
-    comment: String!
+  id: Int!
+  status: String!
+  quantity: Int!
+  offer: OrderItemOffer
+  comment: String!
 }
 
 type Order {
-    number: String!
-    id: Int!
-    site: String!
-    createdAt: String!
-    status: String!
-    delivery: OrderDelivery
-    items: [OrderItem]!
+  number: String!
+  id: Int!
+  site: String
+  createdAt: String!
+  status: String!
+  delivery: OrderDelivery
+  items: [OrderItem]!
 }
 
 type OrderDelivery {
-    code: String
+  code: String
 }
-
