@@ -1,6 +1,6 @@
 type Query {
     getOrders(page: Int): OrdersResponse!
-    order(number: String!): Order
+    order(id: String!): Order
 }
 
 type OrdersResponse {
@@ -42,4 +42,3 @@ type Order {
 type OrderDelivery {
     code: String
 }
-

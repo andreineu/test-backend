@@ -9,7 +9,7 @@
 /* eslint-disable */
 export interface IQuery {
     getOrders(page?: Nullable<number>): OrdersResponse | Promise<OrdersResponse>;
-    order(number: string): Nullable<Order> | Promise<Nullable<Order>>;
+    order(id: string): Nullable<Order> | Promise<Nullable<Order>>;
     productStatuses(): Nullable<ProductStatus>[] | Promise<Nullable<ProductStatus>[]>;
     orderStatuses(): Nullable<OrderStatus>[] | Promise<Nullable<OrderStatus>[]>;
     deliveryTypes(): Nullable<DeliveryType>[] | Promise<Nullable<DeliveryType>[]>;
